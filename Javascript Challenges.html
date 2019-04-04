@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     
+    <title></title>
+  </head>
+  <body>
+  
+    
+    <div>
+<!--Challenge 1-->
+<h1>Javascript Challenges</h1> 
+<h3>Challenge 1</h3>
+<p>Display current day and time</p>
+<button onclick ="currentDayandTime()">Ok</button> 
+
+<script>
+    function currentDayandTime() {
+	var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	var today = new Date();
+    var day = today.getDay();	
+	var hours = today.getHours() > 12 ? today.getHours() - 12 : today.getHours();
+	var am_pm = today.getHours() >= 12 ? "PM" : "AM";
+
+	document.write("Today is : " + weekdays[day] + "." + " Current time is : " + hours + " " + am_pm + " " + ": " + today.getMinutes() + " " + ": " + today.getSeconds() + " ");
+}
+</script>
+</div>
+
+<div>
+<!--Challenge 2-->
+<h3>Challenge 2</h3>
+<p>Get the website URL</p>
+<button onclick ="get_URL()">Ok</button>  
+
+<script> 
+    function get_URL() {
+	alert(window.location.href);
+}
+</script>
+</div>  
+ 
+<div>
+<!--Challenge 3-->
+<h3>Challenge 3</h3>
+<p>Check if a string starts with 'Java'</p>
+<form>
+        Enter a sentence :
+        <input type="text" size="30" id="my_id">
+        <button onclick ="start()">Enter</button>
+</form>
+
+<script>   
+    function start() {
+        var str = document.getElementById("my_id").value;
+        str = str.startsWith('Java');
+        alert (str);
+    } 
+</script>
+</div>
+
+<div>
+<!--Challenge 4-->
+<h3>Challenge 4</h3>
+<p>Find the largest of three given integers</p>
+<form>
+    First number : 
+    <input type="text" size="5" id="top">
+        
+    Second number :
+    <input type="text" size="5" id="middle">
+         
+    Third number :
+    <input type="text" size="5" id="bottom">
+    <button onclick ="largestInt()">Enter</button>
+</form>
+
+<script>
+    function largestInt() {
+    var num1 = document.getElementById("top").value;
+    var num2 = document.getElementById("middle").value;
+    var num3 = document.getElementById("bottom").value;
+  
+    var biggest = 0;
+
+    if (biggest < num1) {
+            biggest = num1;
+        }
+    if (biggest < num2) {
+            biggest = num2;
+            }
+            
+    if (biggest < num3) {
+            biggest = num3;
+            }
+        }
+        alert(biggest);
+
+</script>
+</div>
+
+<div>
+<!--Challenge 5-->
+<h3>Challenge 5</h3>
+<p>Capitalize the First letter of every word</p>
+<form>
+    Enter a sentence :
+    <input type="text" size="50" id="capital">
+    <button onclick ="capsFirstLetter()">Enter</button>
+</form>
+
+<script>
+    function capsFirstLetter() {
+    var str = document.getElementById("capital").value;
+    str =  str.split(" ");
+    for (var i = 0, y = str.length; i < y; i++) {
+    str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+    alert(str.join(" "));
+}
+</script>
+</div>
+
+<div>
+<!--Challenge 6-->
+<h3>Challenge 6</h3>
+<p>Convert hours and minutes</p>
+<form>
+        Enter a number :
+        <input type="text" size="5" id="time_time">
+        <button onclick ="timeConvertion()">Enter</button>  
+</form>
+
+<script>
+    function timeConvertion() {
+    var num = document.getElementById("time_time").value;
+        var hours = Math.floor(num / 60);
+        var minutes = num % 60;
+        alert(hours + ":" + minutes);
+    }
+</script>
+</div>
+
+  </body>
+</html>
